@@ -1,0 +1,600 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body::-webkit-scrollbar {
+    width: 1em;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+
+
+.container {
+    max-width: 1243px;
+    margin: 0 auto;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    padding-top: 60px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.navigation {
+    overflow: hidden;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+}
+
+.navigation .logo {
+    display: inline-block;
+    float: left;
+    width: 150px;
+    margin: 0 40px;
+    font-size: 36px;
+    font-family: Montserrat, serif;
+    font-weight: 800;
+    animation: moveInLeft 1s ease-in-out;
+}
+
+.logo p {
+    width: 100%;
+    overflow: hidden;
+}
+
+.logo:hover p {
+    animation: App-logo-anim ease-in-out 1s alternate backwards;
+    cursor: pointer;
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    80% {
+        transform: translateX(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes App-logo-anim {
+    0% { width: 150px; }
+    50% { width: 0; }
+    100% { width: 100%; }
+}
+
+.navigation .menu {
+    display: inline-block;
+    margin: 10px auto;
+    float: right;
+    animation: moveInRight 1s ease-in-out;
+}
+
+.menu .menu-item {
+    float: left;
+    margin-left: 40px;
+    font-family: Work Sans, sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.menu .menu-item:after {
+    content: '';
+    display: block;
+    margin-top: 10px;
+    height: 1px;
+    width: 0;
+    background: #fff;
+    transition: all ease-in .3s;
+}
+
+.menu .menu-item:hover:after{
+    width: 100%;
+}
+
+
+.intro {
+    overflow: hidden;
+}
+
+.intro .slogan {
+    margin: 10% 10%;
+    width: 500px;
+    animation: moveInBottom 1s ease-in-out;
+}
+
+.slogan .slogan-header {
+    font-family: Leckerli One, sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+}
+
+.slogan-body h1 {
+    margin-top: 20px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 800;
+    font-size: 50px;
+}
+
+.slogan-body h3 {
+    margin-top: 5px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+}
+
+.slogan-body p {
+    font-family: Cambay, sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+
+.btn {
+    border: none;
+    height: 50px;
+    padding: 0 2em;
+    outline: none;
+    font-family: Montserrat, sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 12px;
+    border-radius: 50px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all ease-in-out .3s;
+}
+
+.slogan-footer {
+    overflow-x: hidden;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.regular {
+    background:  #2B2B2B;
+    transition: ease-in .3s;
+}
+
+.regular:hover {
+    background: #ffffff;
+    color:  #2B2B2B;
+    -webkit-box-shadow: 5px 11px 54px -13px rgba(28,187,180,1);
+    -moz-box-shadow: 5px 11px 54px -13px rgba(28,187,180,1);
+    box-shadow: 5px 11px 54px -13px rgba(28,187,180,1);
+}
+
+.about {
+    padding: 80px 0;
+    color: #fff;
+    background: #0081FF;
+}
+
+.description {
+    margin: 0 10%;
+}
+
+.description-header {
+    font-family: Leckerli One, sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    background: none;
+}
+
+.description-body {
+    display: flex;
+    margin-top: 20px;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.description-body .title {
+    font-family: Montserrat, sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+}
+
+.description-body .content {
+    margin-left: 40px;
+    margin-top: 40px;
+    font-family: Cambay, sans-serif;
+    font-size: 17px;
+}
+
+.skills {
+    margin: 50px 0;
+    padding: 50px 0;
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.skill-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10%;
+}
+
+.skill {
+    flex-basis: 30%;
+}
+
+.skill-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.skill-content {
+    display: inline-block;
+    float: right;
+    padding-left: 30px;
+    width: 80%;
+}
+
+.skill-content .title {
+    font-family: Montserrat, sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.skill-content .content {
+    font-family: Cambay, sans-serif;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.social {
+    text-align: center;
+}
+
+.social-text {
+    font-family: Cambay, sans-serif;
+}
+
+.icon {
+    display: inline-block;
+    height: 23px;
+    width: 23px;
+    margin-left: 29px;
+}
+
+.facebook {
+    background: url("img/facebook.svg") center center / 14px 23px no-repeat;
+}
+
+.twitter {
+    background: url("img/twitter.svg") center center / 19px 23px no-repeat;
+}
+
+.github {
+    background: url("img/github.svg") center center / 22px 25px no-repeat;
+}
+
+.linked-in {
+    background: url("img/linked-in.svg") center center / 25px 22px no-repeat;
+}
+
+
+.portfolio-header {
+    margin: 60px 10%;
+}
+
+.portfolio-header .title {
+    font-family: Leckerli One, sans-serif;
+    font-size: 32px;
+    color: #8799A3;
+}
+
+.portfolio-header .content .left {
+    display: inline-block;
+    float: left;
+    width: 40%;
+    font-family: Montserrat, sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    color: #252525;
+}
+
+.portfolio-header .content .right {
+    display: inline-block;
+    float: right;
+}
+
+.grey {
+    background: #1CBBB4;
+}
+
+.grey:hover {
+    background: #252525;
+    -webkit-box-shadow: 5px 11px 54px 5px rgba(28,187,180,1);
+    -moz-box-shadow: 5px 11px 54px 5px rgba(28,187,180,1);
+    box-shadow: 5px 11px 54px 5px rgba(28,187,180,1);
+}
+
+.clients {
+    background: #383838;
+    text-align: center;
+    overflow: hidden;
+    color: #fff;
+}
+
+.clients-header {
+    padding-top: 80px;
+}
+
+.clients-header .title {
+    font-family: Leckerli One, sans-serif;
+    font-size: 32px;
+}
+
+.clients-header .content {
+    font-family: Montserrat, sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+}
+
+.clients-slider {
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+    height: 170px;
+}
+
+.slide
+{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slide-track {
+    list-style: none;
+    height: 100%;
+}
+
+
+.arrow-icon {
+    position: absolute;
+    top: 50%;
+    height: 12px;
+    width: 12px;
+    transform: translateY(-50);
+    cursor: pointer;
+    z-index: 10;
+}
+
+
+.next {
+    right: 0;
+    background: url("img/next.svg") center center / 12px 12px no-repeat ;
+}
+
+.previous {
+    left: 0;
+    background: url("img/previous.svg") center center / 12px 12px no-repeat ;
+}
+
+.is-hidden {
+    display: none;
+}
+
+.slide-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.heading {
+    font-family: Coustard, sans-serif;
+    font-weight: 400;
+}
+
+.heading:before {
+    content: '';
+    display: inline-block;
+    height: 13px;
+    width: 13px;
+    margin-right: 5px;
+    background: url("img/quote-left.svg") center center / 10px 10px  no-repeat;
+}
+
+.heading:after {
+    content: '';
+    display: inline-block;
+    height: 13px;
+    width: 13px;
+    margin-left: 5px;
+    background: url("img/quote-right.svg") center center / 10px 10px  no-repeat;
+}
+
+.avatar {
+    height: 50px;
+    width: 50px;
+    float: left;
+    margin-right: 20px;
+}
+
+.slide-content .body {
+    margin-top: 20px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.client {
+    display: inline-block;
+    float: left;
+}
+
+.client .client-name {
+    font-family: Montserrat, sans-serif;
+    color: #FFFF00;
+}
+
+.client .client-title {
+    font-family: Cambay, sans-serif;
+    font-size: 15px;
+}
+
+.contact {
+    background: #383838;
+    color: #fff;
+    padding-bottom: 50px;
+}
+
+.contact .container {
+    padding-top: 100px;
+    margin: 0 10%;
+}
+
+.contact-header {
+    font-family: Leckerli One, sans-serif;
+    font-size: 32px;
+    background: none;
+}
+
+.contact-container {
+    overflow: hidden;
+}
+
+.contact-container h1 {
+    font-family: Montserrat, sans-serif;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.contact-container .right {
+    display: inline-block;
+    float: right;
+    width: 50%;
+}
+
+.contact-container .left {
+    display: inline-block;
+    float: left;
+    width: 50%;
+}
+
+.contact-container .label {
+    display: inline-block;
+    font-family: Cambay, sans-serif;
+    color: #636363;
+}
+
+.contact-container p {
+    font-family: Cambay, sans-serif;
+    color: #fff;
+}
+
+.text-input {
+    border: 1px solid transparent;
+    border-radius: 40px;
+    height: 40px;
+    padding: 0 30px;
+    margin: 10px;
+    width: 45%;
+    font-family: Cambay, sans-serif;
+    color: #fff;
+    transition: all ease-in .3s;
+}
+
+.text-input:focus {
+    border: 1px solid #8799a3;
+    background: #212121;
+}
+
+.text-input--grey {
+    background: #2B2B2B;
+}
+
+.textarea-input  {
+    border: 1px solid transparent;
+    border-radius: 20px;
+    margin: 10px;
+    padding: 20px 30px;
+    width: 95%;
+    font-family: Cambay, sans-serif;
+    color: #fff;
+    transition: all ease-in .3s;
+}
+
+.textarea-input:focus {
+    border: 1px solid #8799a3;
+    background: #212121;
+}
+
+.text-input::-moz-placeholder {
+    font-family: Cambay, sans-serif;
+    color: #636363;
+}
+
+.textarea-input::-webkit-input-placeholder{
+    color: #636363;
+}
+
+textarea{
+    resize: none;
+}
+
+.textarea-input::-moz-placeholder {
+    font-family: Cambay, sans-serif;
+    color: #636363;
+}
+
+.textarea-input:-ms-input-placeholder {
+    color: #636363;
+}
+
+
+.textarea-input--grey {
+    background: #2B2B2B;
+}
