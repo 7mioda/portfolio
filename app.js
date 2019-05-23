@@ -1,3 +1,7 @@
+
+//--------------------------------------------------------------
+                               /* Slider */
+//--------------------------------------------------------------
 const slider = document.querySelector('.clients-slider');
 const track = slider.querySelector('.slide-track');
 const slides = Array.from(slider.querySelectorAll('.slide'));
@@ -44,5 +48,27 @@ next.addEventListener('click', (event)=> {
     const nextIndex = slides.findIndex(slide => slide === nextSlide);
     hideShowArrows(slides,previous, next, nextIndex);
 });
+
+//--------------------------------------------------------------
+                            /* Menu */
+//--------------------------------------------------------------
+const logo = document.querySelector('.banner__logo');
+const menu = document.querySelector('.banner__menu');
+const button = document.querySelector('.banner__menu__button');
+button.addEventListener('click', () => menu.classList.toggle('active') );
+logo.addEventListener('click', () => menu.classList.toggle('active') );
+//--------------------------------------------------------------
+//                          /* Scroll */
+//--------------------------------------------------------------
+const scroll = new SmoothScroll('a[href*="#"]', { speed: 800 });
+//--------------------------------------------------------------
+//                          /* Up button */
+//--------------------------------------------------------------
+
+window.addEventListener('scroll' , (event)=> {
+    console.log(window.pageYOffset || document.documentElement.scrollTop);
+});
+
+
 
 

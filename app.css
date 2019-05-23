@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+html {
+}
+
+body {
+    background: #22252d;
+}
 
 body::-webkit-scrollbar {
     width: 1em;
@@ -18,6 +24,16 @@ body::-webkit-scrollbar-thumb {
     outline: 1px solid slategrey;
 }
 
+.up-btn {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: #fff;
+    position: fixed;
+    top: 91%;
+    right: 20px;
+}
+
 
 .container {
     max-width: 1243px;
@@ -28,7 +44,7 @@ body::-webkit-scrollbar-thumb {
     height: 100vh;
     padding-top: 60px;
     color: #fff;
-    background: linear-gradient( to left top, #0081ff, #c31e3c);
+    background: linear-gradient(217deg, #282C35, #22252D 10.71%);
 }
 
 .banner__navigation {
@@ -67,12 +83,21 @@ body::-webkit-scrollbar-thumb {
     animation: moveInRight 1s ease-in-out;
 }
 
+.banner__menu__button{
+    display: none;
+}
+
 .banner__menu__menu-item {
     float: left;
     margin-left: 40px;
     font-family: Work Sans, sans-serif;
     font-weight: 500;
     cursor: pointer;
+}
+
+.banner__menu__menu-item a {
+    text-decoration: none;
+    color: #fff;
 }
 
 .banner__menu__menu-item:after {
@@ -180,7 +205,6 @@ body::-webkit-scrollbar-thumb {
 .about {
     padding: 80px 0;
     color: #fff;
-    background: #0081FF;
 }
 
 .description {
@@ -218,7 +242,6 @@ body::-webkit-scrollbar-thumb {
 .skills {
     margin: 50px 0;
     padding: 50px 0;
-    background: rgba(0, 0, 0, 0.15);
 }
 
 .skill-container {
@@ -234,6 +257,7 @@ body::-webkit-scrollbar-thumb {
 .skill-icon {
     width: 50px;
     height: 50px;
+    margin-left: 10px;
 }
 
 .skill-content {
@@ -324,7 +348,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .clients {
-    background: #383838;
+    background: #22252d;
     text-align: center;
     overflow: hidden;
     color: #fff;
@@ -451,7 +475,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .contact {
-    background: #383838;
+    background: #22252d;
     color: #fff;
     padding-bottom: 50px;
 }
@@ -459,6 +483,11 @@ body::-webkit-scrollbar-thumb {
 .contact .container {
     padding-top: 100px;
     margin: 0 10%;
+}
+
+.contact-container button {
+    float: right;
+    margin-right: 23px;
 }
 
 .contact-header {
@@ -606,10 +635,120 @@ textarea{
         transform: translateY(0);
     }
 }
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
 
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-@keyframes App-logo-anim {
-    0% { width: 150px; }
-    50% { width: 0; }
-    100% { width: 100%; }
+@keyframes anim-border {
+    0% {
+    }
+    10%{
+        border-left-color: black;
+    }
+    25% {
+        border-left-color: black;
+        border-top-color: black;
+    }
+    50% {
+        border-left-color: black;
+        border-right-color: black;
+        border-top-color: black;
+    }
+    100% {
+        border-color: black;
+    }
+}
+
+@media only screen and (max-width: 1032px) {
+    .banner {
+        padding-top: 10px;
+        height: auto;
+    }
+
+    .banner__navigation {
+        overflow: initial;
+        width: 100%;
+    }
+
+    .banner__logo {
+        margin: 0 0 0 50px;
+        display: block;
+        float: initial;
+    }
+
+    .banner__menu {
+        position: absolute;
+        top: 0;
+        height: 100vh;
+        display: block;
+        float: initial;
+        transform: translateY(-150%);
+        transition: transform 1s ease-in;
+        background: #22252d;
+        width: 100%;
+    }
+
+    .active {
+        transform: translateY(0);
+    }
+
+    .banner__menu__menu-item {
+        display: block;
+        width: 100%;
+        height: 50px;
+        margin-left: 0;
+        text-align: center;
+    }
+    .banner__menu__button{
+        display: block;
+        float: right;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 3px solid red;
+        animation: anim-border 1s infinite 2s;
+        animation-direction: alternate;
+        cursor: pointer;
+    }
+    .description-body {
+        display: initial;
+    }
+
+    .skill-container {
+        display: initial;
+    }
+
+    .skills {
+        overflow: hidden;
+    }
+
+    .skill {
+        margin: 0 10px 50px 10px;
+    }
+
+    .contact-container .left {
+        display: block;
+        float: initial;
+        width: 100%;
+    }
+    .contact-container .right {
+        display: block;
+        float: initial;
+        width: 100%;
+    }
+
+    .skill-content {
+        padding-left: 0;
+    }
+    .text-input {
+        width: 95%;
+    }
 }
