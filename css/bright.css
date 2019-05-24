@@ -1,0 +1,103 @@
+body {
+    background: #ffffff;
+}
+
+.up-btn {
+    background: #d23669;
+}
+
+.banner {
+    color: #252525;
+}
+
+.banner__intro__slogan__slogan-header {
+    color: #d23669;
+}
+
+.clients {
+    background: #ffff;
+}
+
+.description {
+    color: #252525;
+}
+
+.description-header {
+    color: #d23669;
+}
+
+.skills {
+    color: #252525;
+}
+
+.portfolio-header .title {
+    color: #d23669;
+}
+
+.clients-header .title {
+    color: #d23669;
+}
+
+.portfolio-header .content .left {
+    color: #252525;
+}
+
+.contact {
+    background: #ffffff;
+    color: #252525;
+}
+.contact-header {
+    color: #636363;
+}
+
+.contact-container .label {
+    color: #636363;
+}
+
+.text-input:focus {
+    border: 1px solid #d23669;
+    background: #ffa7f5;
+}
+
+.text-input--grey {
+    border: 1px solid #636363;
+    background: #fff;
+}
+
+.textarea-input:focus {
+    border: 1px solid #d23669;
+    background: #ffa7f5;
+}
+
+.text-input::-moz-placeholder {
+    font-family: Cambay, sans-serif;
+    color: #636363;
+}
+
+.textarea-input::-webkit-input-placeholder{
+    color: #636363;
+}
+
+.textarea-input::-moz-placeholder {
+    font-family: Cambay, sans-serif;
+    color: #636363;
+}
+
+.textarea-input:-ms-input-placeholder {
+    color: #636363;
+}
+
+.textarea-input--grey {
+    border: 1px solid #636363;
+    background: #fff;
+}
+
+
+@media only screen and (max-width: 1032px) {
+
+    .banner__menu {
+        background: #22252d;
+
+    }
+
+}

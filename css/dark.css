@@ -1,0 +1,87 @@
+body {
+    background: #22252d;
+}
+
+.up-btn {
+    background: #fff;
+}
+
+.banner {
+    color: #fff;
+    background: linear-gradient(217deg, #282C35, #22252D 10.71%);
+}
+
+.clients {
+    color: white;
+}
+
+.description {
+    color: #fff;
+}
+
+.skills {
+    color: #fff;
+}
+
+.portfolio-header .title {
+    color: #8799A3;
+}
+
+.portfolio-header .content .left {
+    color: #252525;
+}
+
+.contact {
+    background: #22252d;
+    color: #fff;
+}
+
+.contact-container .label {
+    color: #636363;
+}
+
+.text-input:focus {
+    border: 1px solid #8799a3;
+    background: #212121;
+}
+
+.text-input--grey {
+    background: #2B2B2B;
+}
+
+.textarea-input:focus {
+    border: 1px solid #8799a3;
+    background: #212121;
+}
+
+.text-input::-moz-placeholder {
+    font-family: Cambay, sans-serif;
+    color: #636363;
+}
+
+.textarea-input::-webkit-input-placeholder{
+    color: #636363;
+}
+
+.textarea-input::-moz-placeholder {
+    font-family: Cambay, sans-serif;
+    color: #636363;
+}
+
+.textarea-input:-ms-input-placeholder {
+    color: #636363;
+}
+
+.textarea-input--grey {
+    background: #2B2B2B;
+}
+
+
+@media only screen and (max-width: 1032px) {
+
+    .banner__menu {
+        background: #22252d;
+
+    }
+
+}
