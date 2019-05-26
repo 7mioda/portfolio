@@ -62,8 +62,6 @@ body::-webkit-scrollbar-thumb {
     margin: 0 40px;
     font-size: 36px;
     font-family: Montserrat, serif;
-    font-weight: 800;
-    animation: moveInLeft 1s ease-in-out;
 }
 
 .banner__logo p {
@@ -73,7 +71,6 @@ body::-webkit-scrollbar-thumb {
 
 .banner__logo:hover p {
     animation: App-logo-anim ease-in-out 1s alternate backwards;
-    cursor: pointer;
 }
 
 
@@ -93,12 +90,13 @@ body::-webkit-scrollbar-thumb {
     margin-left: 40px;
     font-family: Work Sans, sans-serif;
     font-weight: 500;
-    cursor: pointer;
+    cursor: url("../img/hand-cursor.png"), auto;
 }
 
 .banner__menu__menu-item a {
     text-decoration: none;
     color: inherit;
+    cursor: url("../img/pointer.png"), pointer;
 }
 
 .banner__menu__menu-item:after {
