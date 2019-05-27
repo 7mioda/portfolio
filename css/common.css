@@ -26,6 +26,7 @@ body::-webkit-scrollbar-thumb {
     position: fixed;
     top: 91%;
     right: 20px;
+    font-size: 25px;
     cursor: url("../img/hand-cursor.png"), pointer;
 }
 
@@ -59,9 +60,11 @@ body::-webkit-scrollbar-thumb {
     display: inline-block;
     float: left;
     width: 150px;
-    margin: 0 40px;
+    color: #252525;
+    font-weight: 600;
     font-size: 36px;
     font-family: Montserrat, serif;
+    pointer-events: none;
     cursor: url("../img/hand-cursor.png"), pointer;
 }
 
@@ -234,7 +237,7 @@ body::-webkit-scrollbar-thumb {
 
 .description-body .content {
     margin-left: 40px;
-    margin-top: 40px;
+    margin-top: 20px;
     font-family: Cambay, sans-serif;
     font-size: 17px;
 }
@@ -252,6 +255,21 @@ body::-webkit-scrollbar-thumb {
 
 .skill {
     flex-basis: 30%;
+}
+
+.portfolio__skill {
+    width: 150px;
+    height: 150px;
+    margin-left: 50px;
+    cursor: url("../img/hand-cursor.png"), pointer;
+}
+
+.portfolio__skills-container {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .skill-icon {
@@ -313,6 +331,7 @@ body::-webkit-scrollbar-thumb {
 
 .portfolio-header {
     margin: 60px 10%;
+    overflow: hidden;
 }
 
 .portfolio-header .title {
@@ -533,6 +552,7 @@ body::-webkit-scrollbar-thumb {
     font-family: Cambay, sans-serif;
     color: inherit;
     transition: all ease-in .3s;
+    outline: none;
 }
 
 
@@ -548,6 +568,7 @@ body::-webkit-scrollbar-thumb {
     font-family: Cambay, sans-serif;
     color: #fff;
     transition: all ease-in .3s;
+    outline: none;
 }
 
 
@@ -645,6 +666,18 @@ textarea{
         margin: 0 0 0 50px;
         display: block;
         float: initial;
+        pointer-events: initial;
+        cursor: url("../img/hand-cursor.png"), pointer;
+    }
+
+    .banner__logo:after {
+        content: '';
+        display: inline-block;
+        height: 15px;
+        width: 15px;
+        background: red;
+        float: right;
+        margin-top: -25px;
     }
 
     .banner__menu {
@@ -716,9 +749,9 @@ textarea{
     }
     .text-input {
         width: 95%;
+        outline: none;
     }
 }
-
 
 .theme-buttons {
     position: absolute;

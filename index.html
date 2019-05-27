@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" title="bright" href="css/bright.css">
     <link rel="alternate stylesheet" type="text/css" disabled="true" title="dark" href="css/dark.css">
 </head>
-<body onload="setStyleFromCookie()">
+<body>
 <div class="theme-buttons">
     <label for='cb1'>
         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35;" xml:space="preserve">
@@ -31,13 +31,13 @@
 </div>
 <div class="banner" id="intro">
     <div class="banner__navigation">
-        <div class="banner__logo"><p>Test</p></div>
+        <div class="banner__logo"><p>Edaly</p></div>
         <nav class="banner__menu">
             <button class="banner__menu__button"></button>
             <span class="banner__menu__menu-item"><a data-scroll href="#intro">Intro</a></span>
             <span class="banner__menu__menu-item"><a data-scroll href="#about">About me</a></span>
-            <span class="banner__menu__menu-item"><a data-scroll href="#portfolio">Portfolio</a></span>
-            <span class="banner__menu__menu-item"><a data-scroll href="#clients">Clients</a></span>
+            <span class="banner__menu__menu-item"><a data-scroll href="#portfolio">Skills</a></span>
+            <span class="banner__menu__menu-item"><a data-scroll href="#clients">What they Say about me</a></span>
             <span class="banner__menu__menu-item"><a data-scroll href="#contact">Contacts</a></span>
         </nav>
     </div>
@@ -45,10 +45,12 @@
         <div class="banner__intro__slogan">
             <span class="banner__intro__slogan__slogan-header">Hi there! 👋</span>
             <div class="banner__intro__slogan__slogan-body">
-                <h1>My name is <br> Test Test</h1>
-                <h3>I'm a web developer</h3>
-                <p>Claritas est etiam processus dynamicus,
-                    qui sequitur mutationem consuetudium lectorum parum, anteposuerit etiam processus dynamicus.</p>
+                <h1>My name is <br> Edaly Ahmed</h1>
+                <h3>I'm a FullStack js web developer</h3>
+                <p>So passionate
+                    , that I can live all my life fixing  bugs
+                    🐞
+                    .</p>
             </div>
             <div class="banner__intro__slogan__slogan-footer">
                 <button class="btn btn--pink">
@@ -66,13 +68,12 @@
             </div>
             <div class="description-body">
                 <div class="title">
-                    Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
+                    Building state-of-art, easy to use websites and applications is truly a passion of mine.
                 </div>
                 <div class="content">
-                    Qestigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
-                    Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum est
-                    notare quam littera gothica, quam nunc putamus est notare quam littera gothica,
-                    quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta.
+                    I actively seek out new technologies and stay up-to-date on industry trends and
+                    advancements.This has allowed me to stay ahead of the curve and deliver exceptional
+                    work to all my employers and clients.
                 </div>
             </div>
         </div>
@@ -82,7 +83,7 @@
             <div class="skill">
                 <img alt="" class="skill-icon" src="img/logo1.png"/>
                 <div class="skill-content">
-                    <div class="title">Web Design & User Interface</div>
+                    <div class="title">Web Design & User Interface</div>
                     <div class="content">
                         Investigationes demonstraverunt lectores legere me eum iriure dolor in hendrerit.
                     </div>
@@ -91,7 +92,7 @@
             <div class="skill">
                 <img alt="" class="skill-icon" src="img/logo2.png"/>
                 <div class="skill-content">
-                    <div class="title">Web Design & User Interface</div>
+                    <div class="title">Modern Frontend Applications</div>
                     <div class="content">
                         Investigationes demonstraverunt lectores legere me eum iriure dolor in hendrerit.
                     </div>
@@ -100,7 +101,7 @@
             <div class="skill">
                 <img alt="" class="skill-icon" src="img/logo3.png"/>
                 <div class="skill-content">
-                    <div class="title">Web Design & User Interface</div>
+                    <div class="title">Salable & Robust API's</div>
                     <div class="content">
                         Investigationes demonstraverunt lectores legere me eum iriure dolor in hendrerit.
                         Investigationes demonstraverunt lectores legere me eum iriure dolor in hendrerit.
@@ -120,24 +121,27 @@
 <div class="portfolio" id="portfolio">
     <div class="container">
         <div class="portfolio-header">
-            <span class="title">Portfolio...</span>
+            <span class="title">Skills...</span>
             <div class="content">
-                <div class="left">I make Beautiful things</div>
+                <div class="left">I have acquired a certain set of skills…</div>
                 <div class="right">
-                    <button class="btn btn--pink">view all projects</button>
+                    <button class="btn btn--pink">view all skills</button>
                 </div>
             </div>
         </div>
+        <div class="portfolio__skills-container">
+        <img src="img/react.png" class="portfolio__skill js-tilt" alt="skill react">
+        <img src="img/redux.png" class="portfolio__skill js-tilt" alt="skill redux">
+        <img src="img/nodejs.png" class="portfolio__skill js-tilt" alt="skill nodejs">
+        <img src="img/graphql.png" class="portfolio__skill js-tilt" alt="skill graphql">
+        <img src="img/angular.png" class="portfolio__skill js-tilt" alt="skill angular">
+        </div>
     </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </div>
 <div class="clients" id="clients">
     <div class="container">
         <div class="clients-header">
-            <span class="title">Clients...</span>
-            <div class="content">
-                What Customers Say;
-            </div>
+            <span class="title">What they Say about me...</span>
         </div>
         <div class="clients-slider">
             <span class="arrow-icon next"></span>
@@ -192,7 +196,6 @@
         </div>
     </div>
 </div>
-<br><br><br><br><br><br>
 <div class="contact" id="contact">
     <div class="container">
         <div class="contact-header">
@@ -213,7 +216,7 @@
             <div class="right">
                 <h1>Get in Touch</h1>
                 <span class="label">You can contact with me using this form:</span>
-                <form action="">
+                <form name="contact" netlify>
                     <div>
                         <label>
                             <input class="text-input text-input--grey" placeholder="Your Name" type="text">
@@ -226,14 +229,14 @@
                                                     cols="30" id="message" name="message"
                                                     placeholder="Type in your message..." rows="3"></textarea>
                     <div>
-                        <button class="btn regular">Send</button>
+                        <button type="submit"  class="btn regular">Send</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
-<button class="up-btn inactive"></button>
+<button class="up-btn inactive">☝️</button>
 <script src="build/js/app.min.js"></script>
 </body>
 </html>
