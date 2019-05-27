@@ -96,8 +96,7 @@ body {
 @media only screen and (max-width: 1032px) {
 
     .banner__menu {
-        background: #22252d;
-
+        background: #fff;
     }
 
 }
