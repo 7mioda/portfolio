@@ -658,7 +658,8 @@ textarea{
     }
 
     .active {
-        transform: translateY(0);
+        transform: translateY(-5%);
+        z-index: 100;
     }
 
     .banner__menu__menu-item {
@@ -719,6 +720,7 @@ textarea{
     position: absolute;
     right: 5px;
     top: 10px;
+    z-index: 50;
 }
 
 #dayIcon {
