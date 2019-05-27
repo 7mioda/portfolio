@@ -1,0 +1,47 @@
+{
+  "name": "potfolio",
+  "version": "1.0.0",
+  "description": "my personal portfolio",
+  "main": "js/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-js": "gulp js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/7mioda/portfolio.git"
+  },
+  "keywords": [
+    "edaly",
+    "ahmed",
+    "portfolio",
+    "7mioda"
+  ],
+  "author": "7mioda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/7mioda/portfolio/issues"
+  },
+  "homepage": "https://github.com/7mioda/portfolio#readme",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "smooth-scroll": "^16.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/runtime": "^7.4.5",
+    "babel-plugin-transform-es2015-modules-commonjs-simple": "^6.7.4",
+    "babelify": "^10.0.0",
+    "browserify": "^16.2.3",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-less": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  }
+}
