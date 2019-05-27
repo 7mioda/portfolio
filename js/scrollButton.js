@@ -9,7 +9,7 @@ export const scrollButton = () => {
         scroll.animateScroll(intro);
     });
     window.addEventListener('scroll' , (event)=> {
-        if((window.pageYOffset || document.documentElement.scrollTop) > 500){
+        if((window.pageYOffset || document.documentElement.scrollTop) > 300){
             upBtn.classList.add('active');
             upBtn.classList.remove('inactive');
         } else if (!upBtn.classList.contains('inactive')){
