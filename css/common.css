@@ -27,6 +27,7 @@ body::-webkit-scrollbar-thumb {
     top: 91%;
     right: 20px;
     font-size: 25px;
+    outline: none;
     cursor: url("../img/hand-cursor.png"), pointer;
 }
 
@@ -124,7 +125,6 @@ body::-webkit-scrollbar-thumb {
 
 .banner__intro__slogan {
     margin: 10% 10%;
-    width: 500px;
     animation: moveInBottom 1s ease-in-out;
 }
 
@@ -210,9 +210,6 @@ body::-webkit-scrollbar-thumb {
     color: inherit;
 }
 
-.description {
-    margin: 0 10%;
-}
 
 .description-header {
     font-family: Leckerli One, sans-serif;
@@ -250,7 +247,6 @@ body::-webkit-scrollbar-thumb {
 .skill-container {
     display: flex;
     justify-content: space-between;
-    margin: 0 10%;
 }
 
 .skill {
@@ -313,25 +309,19 @@ body::-webkit-scrollbar-thumb {
 }
 
 .facebook {
-    background: url("img/facebook.svg") center center / 14px 23px no-repeat;
+    background: url("../img/facebook.svg") center center / 14px 23px no-repeat;
 }
 
 .twitter {
-    background: url("img/twitter.svg") center center / 19px 23px no-repeat;
+    background: url("../img/twitter.svg") center center / 19px 23px no-repeat;
 }
 
 .github {
-    background: url("img/github.svg") center center / 22px 25px no-repeat;
+    background: url("../img/github.svg") center center / 22px 25px no-repeat;
 }
 
 .linked-in {
-    background: url("img/linked-in.svg") center center / 25px 22px no-repeat;
-}
-
-
-.portfolio-header {
-    margin: 60px 10%;
-    overflow: hidden;
+    background: url("../img/linked-in.svg") center center / 25px 22px no-repeat;
 }
 
 .portfolio-header .title {
@@ -365,7 +355,6 @@ body::-webkit-scrollbar-thumb {
 }
 
 .clients {
-    text-align: center;
     overflow: hidden;
     color: inherit;
 }
@@ -390,6 +379,7 @@ body::-webkit-scrollbar-thumb {
     position: relative;
     overflow: hidden;
     height: 170px;
+    text-align: center;
 }
 
 .slide
@@ -410,22 +400,22 @@ body::-webkit-scrollbar-thumb {
 .arrow-icon {
     position: absolute;
     top: 50%;
-    height: 12px;
-    width: 12px;
+    height: 20px;
+    width: 20px;
     transform: translateY(-50);
-    cursor: pointer;
     z-index: 10;
+    cursor: url("../img/hand-cursor.png"), pointer;
 }
 
 
 .next {
     right: 0;
-    background: url("img/next.svg") center center / 12px 12px no-repeat ;
+    background: url("../img/next.svg") center center / 20px 20px no-repeat ;
 }
 
 .previous {
     left: 0;
-    background: url("img/previous.svg") center center / 12px 12px no-repeat ;
+    background: url("../img/previous.svg") center center / 20px 20px no-repeat ;
 }
 
 .is-hidden {
@@ -491,7 +481,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .contact {
-    padding-bottom: 50px;
+    margin-top: 50px;
 }
 
 .contact .container {
@@ -652,6 +642,9 @@ textarea{
 }
 
 @media only screen and (max-width: 1032px) {
+    .container {
+        margin: 0 50px;
+    }
     .banner {
         padding-top: 10px;
         height: auto;
