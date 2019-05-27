@@ -4,7 +4,6 @@
   "description": "my personal portfolio",
   "main": "js/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build-js": "gulp js"
   },
   "repository": {
@@ -25,7 +24,8 @@
   "homepage": "https://github.com/7mioda/portfolio#readme",
   "dependencies": {
     "gulp": "^4.0.2",
-    "smooth-scroll": "^16.0.3"
+    "smooth-scroll": "^16.0.3",
+    "vanilla-tilt": "^1.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
