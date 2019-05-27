@@ -26,7 +26,7 @@ body::-webkit-scrollbar-thumb {
     position: fixed;
     top: 91%;
     right: 20px;
-    cursor: pointer;
+    cursor: url("../img/hand-cursor.png"), pointer;
 }
 
 .active {
@@ -62,8 +62,7 @@ body::-webkit-scrollbar-thumb {
     margin: 0 40px;
     font-size: 36px;
     font-family: Montserrat, serif;
-    font-weight: 800;
-    animation: moveInLeft 1s ease-in-out;
+    cursor: url("../img/hand-cursor.png"), pointer;
 }
 
 .banner__logo p {
@@ -73,7 +72,6 @@ body::-webkit-scrollbar-thumb {
 
 .banner__logo:hover p {
     animation: App-logo-anim ease-in-out 1s alternate backwards;
-    cursor: pointer;
 }
 
 
@@ -93,12 +91,13 @@ body::-webkit-scrollbar-thumb {
     margin-left: 40px;
     font-family: Work Sans, sans-serif;
     font-weight: 500;
-    cursor: pointer;
+    cursor: url("../img/hand-cursor.png"), pointer;
 }
 
 .banner__menu__menu-item a {
     text-decoration: none;
     color: inherit;
+    cursor: url("../img/hand-cursor.png"), pointer;
 }
 
 .banner__menu__menu-item:after {
@@ -651,6 +650,7 @@ textarea{
     .banner__menu {
         position: absolute;
         top: 0;
+        padding: 50px;
         height: 100vh;
         display: block;
         float: initial;
@@ -660,7 +660,8 @@ textarea{
     }
 
     .active {
-        transform: translateY(0);
+        transform: translateY(-5%);
+        z-index: 100;
     }
 
     .banner__menu__menu-item {
@@ -672,7 +673,9 @@ textarea{
     }
     .banner__menu__button{
         display: block;
-        float: right;
+        position: absolute;
+        bottom: 0;
+        right: 0;
         width: 40px;
         height: 40px;
         border-radius: 50%;
@@ -721,6 +724,7 @@ textarea{
     position: absolute;
     right: 5px;
     top: 10px;
+    z-index: 50;
 }
 
 #dayIcon {
@@ -742,7 +746,7 @@ textarea{
 }
 
 #dayIcon, #nightIcon {
-    cursor: pointer;
+    cursor: url("../img/hand-cursor.png"), pointer;
 }
 
 .toggle {
@@ -768,12 +772,12 @@ textarea{
     width: 38px;
     height: 21px;
     position: relative;
-    cursor: pointer;
     border: 2px solid #d23669;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    cursor: url("../img/hand-cursor.png"), pointer;
 }
 
 .toggle + .toggle-button:after, .toggle + .toggle-button:before {
