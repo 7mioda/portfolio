@@ -1,7 +1,15 @@
+@import "variables";
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: @cursor;
 }
 
 
@@ -28,7 +36,7 @@ body::-webkit-scrollbar-thumb {
     right: 20px;
     font-size: 25px;
     outline: none;
-    cursor: url("../img/hand-cursor.png"), pointer;
+    cursor: @cursor;
 }
 
 .active {
@@ -44,17 +52,19 @@ body::-webkit-scrollbar-thumb {
     max-width: 1243px;
     margin: 0 auto;
 }
+
+.full-container {
+    position: relative;
+}
+
 .banner {
-    width: 100%;
     height: 100vh;
     padding-top: 60px;
 }
 
 .banner__navigation {
     overflow: hidden;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
+    margin: 0 10px;
 }
 
 .banner__logo {
@@ -66,16 +76,14 @@ body::-webkit-scrollbar-thumb {
     font-size: 36px;
     font-family: Montserrat, serif;
     pointer-events: none;
-    cursor: url("../img/hand-cursor.png"), pointer;
-}
-
-.banner__logo p {
-    width: 100%;
-    overflow: hidden;
-}
-
-.banner__logo:hover p {
-    animation: App-logo-anim ease-in-out 1s alternate backwards;
+    cursor: @cursor;
+    p {
+        width: 100%;
+        overflow: hidden;
+    }
+    &:hover p {
+        animation: App-logo-anim ease-in-out 1s alternate backwards;
+    }
 }
 
 
@@ -95,13 +103,13 @@ body::-webkit-scrollbar-thumb {
     margin-left: 40px;
     font-family: Work Sans, sans-serif;
     font-weight: 500;
-    cursor: url("../img/hand-cursor.png"), pointer;
+    cursor: @cursor;
 }
 
 .banner__menu__menu-item a {
     text-decoration: none;
     color: inherit;
-    cursor: url("../img/hand-cursor.png"), pointer;
+    cursor: @cursor;
 }
 
 .banner__menu__menu-item:after {
@@ -118,13 +126,8 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
 }
 
-
-.banner__intro {
-    overflow: hidden;
-}
-
 .banner__intro__slogan {
-    margin: 10% 10%;
+    margin-top: 20vh;
     animation: moveInBottom 1s ease-in-out;
 }
 
@@ -169,10 +172,6 @@ body::-webkit-scrollbar-thumb {
     color: #ffffff;
     cursor: pointer;
     transition: all ease-in-out .3s;
-}
-
-.banner__intro__slogan__slogan-footer {
-    overflow-x: hidden;
 }
 
 .btn:active {
@@ -224,19 +223,17 @@ body::-webkit-scrollbar-thumb {
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-between;
-}
-
-.description-body .title {
-    font-family: Montserrat, sans-serif;
-    font-weight: 800;
-    font-size: 30px;
-}
-
-.description-body .content {
-    margin-left: 40px;
-    margin-top: 20px;
-    font-family: Cambay, sans-serif;
-    font-size: 17px;
+    .title {
+        font-family: Montserrat, sans-serif;
+        font-weight: 800;
+        font-size: 30px;
+    }
+    .content {
+        margin-left: 40px;
+        margin-top: 20px;
+        font-family: Cambay, sans-serif;
+        font-size: 17px;
+    }
 }
 
 .skills {
@@ -257,7 +254,7 @@ body::-webkit-scrollbar-thumb {
     width: 150px;
     height: 150px;
     margin-left: 50px;
-    cursor: url("../img/hand-cursor.png"), pointer;
+    cursor: @cursor;
 }
 
 .portfolio__skills-container {
@@ -271,7 +268,6 @@ body::-webkit-scrollbar-thumb {
 .skill-icon {
     width: 50px;
     height: 50px;
-    margin-left: 10px;
 }
 
 .skill-content {
@@ -279,18 +275,17 @@ body::-webkit-scrollbar-thumb {
     float: right;
     padding-left: 30px;
     width: 80%;
-}
+    .title {
+        font-family: Montserrat, sans-serif;
+        font-size: 20px;
+        font-weight: 800;
+    }
 
-.skill-content .title {
-    font-family: Montserrat, sans-serif;
-    font-size: 20px;
-    font-weight: 800;
-}
-
-.skill-content .content {
-    font-family: Cambay, sans-serif;
-    font-size: 15px;
-    margin-top: 10px;
+    .content {
+        font-family: Cambay, sans-serif;
+        font-size: 15px;
+        margin-top: 10px;
+    }
 }
 
 .social {
@@ -309,38 +304,42 @@ body::-webkit-scrollbar-thumb {
 }
 
 .facebook {
-    background: url("../img/facebook.svg") center center / 14px 23px no-repeat;
+    background: url("../../img/facebook.svg") center center / 14px 23px no-repeat;
 }
 
 .twitter {
-    background: url("../img/twitter.svg") center center / 19px 23px no-repeat;
+    background: url("../../img/twitter.svg") center center / 19px 23px no-repeat;
 }
 
 .github {
-    background: url("../img/github.svg") center center / 22px 25px no-repeat;
+    background: url("../../img/github.svg") center center / 22px 25px no-repeat;
 }
 
 .linked-in {
-    background: url("../img/linked-in.svg") center center / 25px 22px no-repeat;
+    background: url("../../img/linked-in.svg") center center / 25px 22px no-repeat;
 }
 
-.portfolio-header .title {
-    font-family: Leckerli One, sans-serif;
-    font-size: 32px;
-}
+.portfolio-header {
+    .title {
+        font-family: Leckerli One, sans-serif;
+        font-size: 32px;
+    }
 
-.portfolio-header .content .left {
-    display: inline-block;
-    float: left;
-    width: 40%;
-    font-family: Montserrat, sans-serif;
-    font-weight: 800;
-    font-size: 30px;
-}
+    .content {
+        .left {
+            display: inline-block;
+            float: left;
+            width: 40%;
+            font-family: Montserrat, sans-serif;
+            font-weight: 800;
+            font-size: 30px;
+        }
 
-.portfolio-header .content .right {
-    display: inline-block;
-    float: right;
+        .right {
+            display: inline-block;
+            float: right;
+        }
+    }
 }
 
 .grey {
@@ -361,18 +360,18 @@ body::-webkit-scrollbar-thumb {
 
 .clients-header {
     padding-top: 80px;
+    .title {
+        font-family: Leckerli One, sans-serif;
+        font-size: 32px;
+    }
+
+    .content {
+        font-family: Montserrat, sans-serif;
+        font-weight: 800;
+        font-size: 30px;
+    }
 }
 
-.clients-header .title {
-    font-family: Leckerli One, sans-serif;
-    font-size: 32px;
-}
-
-.clients-header .content {
-    font-family: Montserrat, sans-serif;
-    font-weight: 800;
-    font-size: 30px;
-}
 
 .clients-slider {
     margin-top: 50px;
@@ -404,18 +403,18 @@ body::-webkit-scrollbar-thumb {
     width: 20px;
     transform: translateY(-50);
     z-index: 10;
-    cursor: url("../img/hand-cursor.png"), pointer;
+    cursor: @cursor;
 }
 
 
 .next {
     right: 0;
-    background: url("../img/next.svg") center center / 20px 20px no-repeat ;
+    background: url("../../img/next.svg") center center / 20px 20px no-repeat ;
 }
 
 .previous {
     left: 0;
-    background: url("../img/previous.svg") center center / 20px 20px no-repeat ;
+    background: url("../../img/previous.svg") center center / 20px 20px no-repeat ;
 }
 
 .is-hidden {
@@ -432,24 +431,22 @@ body::-webkit-scrollbar-thumb {
 .heading {
     font-family: Coustard, sans-serif;
     font-weight: 400;
-}
-
-.heading:before {
-    content: '';
-    display: inline-block;
-    height: 13px;
-    width: 13px;
-    margin-right: 5px;
-    background: url("img/quote-left.svg") center center / 10px 10px  no-repeat;
-}
-
-.heading:after {
-    content: '';
-    display: inline-block;
-    height: 13px;
-    width: 13px;
-    margin-left: 5px;
-    background: url("img/quote-right.svg") center center / 10px 10px  no-repeat;
+    &:before {
+        content: '';
+        display: inline-block;
+        height: 13px;
+        width: 13px;
+        margin-right: 5px;
+        background: url("../../img/quote-left.svg") center center / 10px 10px  no-repeat;
+    }
+    &:after {
+        content: '';
+        display: inline-block;
+        height: 13px;
+        width: 13px;
+        margin-left: 5px;
+        background: url("../../img/quote-right.svg") center center / 10px 10px  no-repeat;
+    }
 }
 
 .avatar {
@@ -468,20 +465,20 @@ body::-webkit-scrollbar-thumb {
 .client {
     display: inline-block;
     float: left;
+    .client-name {
+        font-family: Montserrat, sans-serif;
+        color: #FFFF00;
+    }
+    .client-title {
+        font-family: Cambay, sans-serif;
+        font-size: 15px;
+    }
 }
 
-.client .client-name {
-    font-family: Montserrat, sans-serif;
-    color: #FFFF00;
-}
-
-.client .client-title {
-    font-family: Cambay, sans-serif;
-    font-size: 15px;
-}
 
 .contact {
     margin-top: 50px;
+    padding-bottom: 50px;
 }
 
 .contact .container {
@@ -502,34 +499,32 @@ body::-webkit-scrollbar-thumb {
 
 .contact-container {
     overflow: hidden;
-}
+    h1 {
+        font-family: Montserrat, sans-serif;
+        font-weight: 800;
+        margin-bottom: 20px;
+    }
 
-.contact-container h1 {
-    font-family: Montserrat, sans-serif;
-    font-weight: 800;
-    margin-bottom: 20px;
-}
+    p {
+        font-family: Cambay, sans-serif;
+        color: inherit;
+    }
 
-.contact-container .right {
-    display: inline-block;
-    float: right;
-    width: 50%;
-}
+    .right {
+        display: inline-block;
+        float: right;
+        width: 50%;
+    }
+    .left {
+        display: inline-block;
+        float: left;
+        width: 50%;
+    }
 
-.contact-container .left {
-    display: inline-block;
-    float: left;
-    width: 50%;
-}
-
-.contact-container .label {
-    display: inline-block;
-    font-family: Cambay, sans-serif;
-}
-
-.contact-container p {
-    font-family: Cambay, sans-serif;
-    color: inherit;
+    .label {
+        display: inline-block;
+        font-family: Cambay, sans-serif;
+    }
 }
 
 .text-input {
@@ -545,10 +540,6 @@ body::-webkit-scrollbar-thumb {
     outline: none;
 }
 
-
-
-
-
 .textarea-input  {
     border: 1px solid transparent;
     border-radius: 20px;
@@ -560,7 +551,6 @@ body::-webkit-scrollbar-thumb {
     transition: all ease-in .3s;
     outline: none;
 }
-
 
 
 textarea{
@@ -641,7 +631,7 @@ textarea{
     }
 }
 
-@media only screen and (max-width: 1032px) {
+@media only screen and (max-width: @break-point-max-width) {
     .container {
         margin: 0 50px;
     }
@@ -660,22 +650,22 @@ textarea{
         display: block;
         float: initial;
         pointer-events: initial;
-        cursor: url("../img/hand-cursor.png"), pointer;
-    }
-
-    .banner__logo:after {
-        content: '';
-        display: inline-block;
-        height: 15px;
-        width: 15px;
-        background: red;
-        float: right;
-        margin-top: -25px;
+        cursor: @cursor;
+        &:after {
+            content: '';
+            display: inline-block;
+            height: 15px;
+            width: 15px;
+            background: red;
+            float: right;
+            margin-top: -25px;
+        }
     }
 
     .banner__menu {
         position: absolute;
         top: 0;
+        left: 0;
         padding: 50px;
         height: 100vh;
         display: block;
@@ -686,7 +676,7 @@ textarea{
     }
 
     .active {
-        transform: translateY(-5%);
+        transform: translateY(0);
         z-index: 100;
     }
 
@@ -696,6 +686,7 @@ textarea{
         height: 50px;
         margin-left: 0;
         text-align: center;
+        font-size: 4vw;
     }
     .banner__menu__button{
         display: block;
@@ -723,18 +714,27 @@ textarea{
     }
 
     .skill {
-        margin: 0 10px 50px 10px;
+        margin-bottom: 50px;
+        overflow: hidden;
     }
 
-    .contact-container .left {
+    .contact-container {
+        .left {
         display: block;
         float: initial;
         width: 100%;
+        }
+        .right {
+            display: block;
+            float: initial;
+            width: 100%;
+        }
     }
-    .contact-container .right {
+
+    .social {
+        .social-text {
         display: block;
-        float: initial;
-        width: 100%;
+        }
     }
 
     .skill-content {
@@ -743,6 +743,25 @@ textarea{
     .text-input {
         width: 95%;
         outline: none;
+    }
+
+    .portfolio-header {
+        .content {
+            .left {
+                display: block;
+                float: initial;
+                width: 100%;
+            }
+            .right {
+                margin: 0 10px 50px 0;
+                overflow: hidden;
+            }
+        }
+    }
+    .portfolio__skills-container {
+        .portfolio__skill {
+            margin-left: 0;
+        }
     }
 }
 
@@ -772,7 +791,7 @@ textarea{
 }
 
 #dayIcon, #nightIcon {
-    cursor: url("../img/hand-cursor.png"), pointer;
+    cursor: @cursor;
 }
 
 .toggle {
@@ -803,7 +822,7 @@ textarea{
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    cursor: url("../img/hand-cursor.png"), pointer;
+    cursor: @cursor;
 }
 
 .toggle + .toggle-button:after, .toggle + .toggle-button:before {

@@ -1,3 +1,5 @@
+@import "variables";
+
 body {
     background: #ffffff;
 }
@@ -8,6 +10,10 @@ body {
 
 .banner {
     color: #252525;
+}
+
+.full-container {
+    background: #fff;
 }
 
 .banner__intro__slogan__slogan-header {
@@ -93,14 +99,14 @@ body {
 }
 
 
-@media only screen and (max-width: 1032px) {
+@media only screen and (max-width: @break-point-max-width) {
 
     .banner__menu {
         background: #fff;
     }
 
     .banner__logo:after {
-        background: url("../img/down-arrow.svg");
+        background: url("../../img/down-arrow.svg");
     }
 
 }

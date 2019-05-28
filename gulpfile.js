@@ -8,17 +8,19 @@ const source = require('vinyl-source-stream');
 const babel = require("babelify");
 const buffer = require("vinyl-buffer");
 const gulp = require('gulp');
+const path = require('path');
 
 
 function css() {
     return src('css/*.less')
-        .pipe(less())
-        .pipe(minifyCSS())
+        .pipe(less({
+            paths: [ path.join(__dirname, 'css') ]
+        }))
         .pipe(dest('build/css'))
 }
 
 function js() {
-    const bundler = browserify('js/app.js', { debug: true }).transform(babel);
+    const bundler = browserify(['js/polyfill.js','js/app.js'], { debug: true }).transform(babel);
     return bundler.bundle()
         .on('error', function(err) { console.error(err); this.emit('end'); })
         .pipe(source('js/app.min.js'))

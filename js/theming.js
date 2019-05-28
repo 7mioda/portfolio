@@ -43,7 +43,7 @@ const getCookie = ( cookieName )  => {
     return '' ;
 };
 
-const  switchStyle = ( cssTitle, domain ) => {
+export const  switchStyle = ( cssTitle, domain ) => {
     styleSheets.forEach(styleSheet => {
         if((styleSheet.title )&& (styleSheet.title === cssTitle)){
             styleSheet.disabled = false;

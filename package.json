@@ -4,7 +4,9 @@
   "description": "my personal portfolio",
   "main": "js/app.js",
   "scripts": {
-    "build-js": "gulp js"
+    "build-js": "gulp js",
+    "build-css": "gulp css",
+    "build": "gulp"
   },
   "repository": {
     "type": "git",
@@ -23,6 +25,7 @@
   },
   "homepage": "https://github.com/7mioda/portfolio#readme",
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "gulp": "^4.0.2",
     "smooth-scroll": "^16.0.3",
     "vanilla-tilt": "^1.7.0"

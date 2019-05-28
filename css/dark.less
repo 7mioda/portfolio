@@ -1,3 +1,4 @@
+@import "variables";
 body {
     background: #22252d;
 }
@@ -8,6 +9,9 @@ body {
 
 .banner {
     color: #fff;
+}
+
+.full-container {
     background: linear-gradient(217deg, #282C35, #22252D 10.71%);
 }
 
@@ -85,15 +89,14 @@ body {
 }
 
 
-@media only screen and (max-width: 1032px) {
+@media only screen and (max-width: @break-point-max-width) {
 
     .banner__menu {
         background: #22252d;
-
     }
 
     .banner__logo:after {
-        background: url("../img/down-arrow-bright.svg");
+        background: url("../../img/down-arrow-bright.svg");
     }
 
 }
