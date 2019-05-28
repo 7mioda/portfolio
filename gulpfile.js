@@ -18,7 +18,7 @@ function css() {
 }
 
 function js() {
-    const bundler = browserify('js/app.js', { debug: true }).transform(babel);
+    const bundler = browserify(['js/polyfill.js','js/app.js'], { debug: true }).transform(babel);
     return bundler.bundle()
         .on('error', function(err) { console.error(err); this.emit('end'); })
         .pipe(source('js/app.min.js'))

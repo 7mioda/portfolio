@@ -1,4 +1,4 @@
-import scroll from './scroll'
+import scroll from './scroll';
 import { themeProvider, setStyleFromStorage } from "./theming";
 import { slider } from "./slider";
 import { menu } from "./menu";
