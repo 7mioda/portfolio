@@ -1,11 +1,17 @@
 import scroll from './scroll';
-import { themeProvider, setStyleFromStorage } from "./theming";
+import { themeProvider, switchStyle } from "./theming";
 import { slider } from "./slider";
 import { menu } from "./menu";
 import { scrollButton } from "./scrollButton";
 import VanillaTilt from "vanilla-tilt";
 
-document.onload = () => setStyleFromStorage();
+window.onload = () => {
+    const theme = localStorage.getItem( 'theme' );
+        if(theme === "dark") {
+            document.querySelector(".toggle").checked = true;
+        }
+    switchStyle(theme);
+};
 scrollButton();
 menu();
 themeProvider();

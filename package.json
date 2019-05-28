@@ -5,7 +5,8 @@
   "main": "js/app.js",
   "scripts": {
     "build-js": "gulp js",
-    "build-css": "gulp css"
+    "build-css": "gulp css",
+    "build": "gulp"
   },
   "repository": {
     "type": "git",

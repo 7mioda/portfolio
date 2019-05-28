@@ -1,4 +1,4 @@
-@cursor: url("../../img/hand-cursor.png"), pointer;
+@import "variables";
 
 *{
     margin: 0;
@@ -7,6 +7,8 @@
 }
 
 a {
+    text-decoration: none;
+    color: inherit;
     cursor: @cursor;
 }
 
@@ -629,7 +631,7 @@ textarea{
     }
 }
 
-@media only screen and (max-width: 1243px) {
+@media only screen and (max-width: @break-point-max-width) {
     .container {
         margin: 0 50px;
     }
@@ -674,7 +676,7 @@ textarea{
     }
 
     .active {
-        transform: translateY(-5%);
+        transform: translateY(0);
         z-index: 100;
     }
 
