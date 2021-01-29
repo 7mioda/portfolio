@@ -9,7 +9,6 @@ export const themeProvider = () => {
     themeToggle.addEventListener('click', ()=> {
         styleSheets.forEach(styleSheet => {
             if(styleSheet.title){
-                console.log(styleSheet.disabled === true);
                 if(styleSheet.disabled === true) {
                     localStorage.setItem('theme', styleSheet.title);
                 }
@@ -56,7 +55,6 @@ export const  switchStyle = ( cssTitle, domain ) => {
 
 export const setStyleFromStorage = () => {
     const cssTitle = localStorage.getItem( 'theme' );
-    console.log(cssTitle);
     if (cssTitle.length) {
         switchStyle(cssTitle);
     }
